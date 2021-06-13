@@ -1,1 +1,164 @@
-#code will be coming soon 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        .form-control{
+            width:30%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Churn prediction system</h1>
+    <div class="container">
+        <form action="http://localhost:5000/" method="POST">
+        <div class="row">
+            <label for="comment">Senior Citizen
+            </label>
+            <textarea class="form-control" id= 'query1' name="query1">{{query1}}</textarea>
+        </div>
+        <div class="row">
+            <label for="comment">Monthly charges
+            </label>
+            <textarea class="form-control" id='query2' name="query2">{{query2}}</textarea>
+        </div>
+        <div class="row">
+            <label for="comment">Total charges
+            </label>
+            <textarea class="form-control" id="query3" name="query3">{{query3}}</textarea>
+        </div>
+        <div class="row">
+            <label for="comment">Gender
+            </label>
+            <textarea class="form-control" id="query4" name="query4">{{query4}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Partner
+            </label>
+            <textarea class="form-control" id="query5" name="query5">{{query5}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Dependence
+            </label>
+            <textarea class="form-control" id="query6" name="query6">{{query6}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Phone Service
+            </label>
+            <textarea class="form-control" id="query7" name="query7">{{query7}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Multiplie lines
+            </label>
+            <textarea class="form-control" id="query8" name="query8">{{query8}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Internet Service
+            </label>
+            <textarea class="form-control" id="query9" name="query9">{{query9}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Online Security
+            </label>
+            <textarea class="form-control" id="query10" name="query10">{{query10}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Online backup
+            </label>
+            <textarea class="form-control" id="query11" name="query11">{{query11}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Device Protection
+            </label>
+            <textarea class="form-control" id="query12" name="query12">{{query12}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Tech Support
+            </label>
+            <textarea class="form-control" id="query13" name="query13">{{query13}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Streaming Tv
+            </label>
+            <textarea class="form-control" id="query14" name="query14">{{query14}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Streaming movies
+            </label>
+            <textarea class="form-control" id="query15" name="query15">{{query15}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Contract
+            </label>
+            <textarea class="form-control" id="query16" name="query16">{{query16}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Paperless Billing
+            </label>
+            <textarea class="form-control" id="query17" name="query17">{{query17}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Payment Method
+            </label>
+            <textarea class="form-control" id="query18" name="query18">{{query18}}</textarea>
+        </div>  <div class="row">
+            <label for="comment">Tenure
+            </label>
+            <textarea class="form-control" id="query19" name="query19">{{query19}}</textarea>
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+        <button type="reset" class="btn btn-primary" onclick="myreset()"> RESET</button>
+
+        </form>
+        <div class="row"> 
+			<div class="col-sm-9">
+			<textarea class="form-control"  id="comment" name="output1"  >{{output1}}</textarea>
+			<textarea class="form-control" id = "comment" name="output2" >{{output2}}</textarea>
+			</div>
+		</div>
+    </div>
+</body>
+<script>
+function myreset(){
+    var quer = document.getElementById('query1');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query1');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query2');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query3');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query4');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query5');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query6');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query7');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query8');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query9');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query10');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query11');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query12');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query13');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query14');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query15');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query16');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query17');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query18');
+            quer.innerHTML = "  ";
+            var quer = document.getElementById('query19');
+            quer.innerHTML = "  ";
+
+    
+}
+</script>
+</html>
