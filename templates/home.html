@@ -3,162 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="" defer></script>
     <title>Document</title>
     <style>
-        .form-control{
-            width:30%;
-        }
+      body{
+       background-image: url({{url_for('static',filename='background.png')}});
+        background-size: 100%,100%;
+        background-repeat: no-repeat;
+      }
+      .img-man{
+        position:fixed;
+        bottom: 10%;
+        right: 3%;
+        height:50%;
+        width: 35%;
+        background-image: url({{url_for('static',filename='man.png')}});
+        background-size: 100%,100%;
+        background-repeat: no-repeat;
+        
+      }
+      .white{
+        position: fixed;
+        bottom: 7%;
+        height: 70%;
+        width: 50%;
+        left: 2%;
+        background-color:white;
+        border-radius: 2%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        overflow: scroll;
+        padding: 2%;
+      }
+      .label-name{
+      color:
+#3a3b3b;
+      font-size: 14px;
+      font-family: monospace;
+      padding-top: 5%;
+      padding-bottom: 0;
+}
+.form-control{
+  height: 10%;
+  width: 100%;
+  background-color: #e8eefa
+
+}
+.heading{
+  font-weight: 900;
+  font-size: 50px;
+  margin:5%;
+  left: 15%;
+
+}
+.inp{
+  position:relative;
+
+}
+.out{
+  position: relative;
+ 
+
+}
+.submit {
+    position: relative;
+    background-color: #97b0e3;
+    height: fit-content;
+    width: fit-content;
+    border: 2px solid white;
+    font-weight: 500;
+    border-radius: 15%;
+    padding: 1% 4%;
+    margin: 5%;
+    font-family: cursive;
+}
+.submit:hover{
+  background-color: rgb(48, 46, 46);
+  color: aliceblue;
+}
+
+
+
     </style>
 </head>
 <body>
-    <h1>Churn prediction system</h1>
-    <div class="container">
-        <form action="http://localhost:5000/" method="POST">
-        <div class="row">
-            <label for="comment">Senior Citizen
+<h1 class="heading">Churn Prediction APP</h1>
+<div class="white" id="check">
+      <div id="input" class="inp">
+        <form action="http://localhost:5000/" method="POST" id="fomm">
+          <div class="row">
+          <div class="col-md-4">
+            <label class="label-name">seniour cittizenn
             </label>
-            <textarea class="form-control" id= 'query1' name="query1">{{query1}}</textarea>
+            <textarea class="form-control" id='query1' name="query1">{{query2}}</textarea>
         </div>
-        <div class="row">
-            <label for="comment">Monthly charges
-            </label>
-            <textarea class="form-control" id='query2' name="query2">{{query2}}</textarea>
-        </div>
-        <div class="row">
-            <label for="comment">Total charges
-            </label>
-            <textarea class="form-control" id="query3" name="query3">{{query3}}</textarea>
-        </div>
-        <div class="row">
-            <label for="comment">Gender
-            </label>
-            <textarea class="form-control" id="query4" name="query4">{{query4}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Partner
-            </label>
-            <textarea class="form-control" id="query5" name="query5">{{query5}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Dependence
-            </label>
-            <textarea class="form-control" id="query6" name="query6">{{query6}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Phone Service
-            </label>
-            <textarea class="form-control" id="query7" name="query7">{{query7}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Multiplie lines
-            </label>
-            <textarea class="form-control" id="query8" name="query8">{{query8}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Internet Service
-            </label>
-            <textarea class="form-control" id="query9" name="query9">{{query9}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Online Security
-            </label>
-            <textarea class="form-control" id="query10" name="query10">{{query10}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Online backup
-            </label>
-            <textarea class="form-control" id="query11" name="query11">{{query11}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Device Protection
-            </label>
-            <textarea class="form-control" id="query12" name="query12">{{query12}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Tech Support
-            </label>
-            <textarea class="form-control" id="query13" name="query13">{{query13}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Streaming Tv
-            </label>
-            <textarea class="form-control" id="query14" name="query14">{{query14}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Streaming movies
-            </label>
-            <textarea class="form-control" id="query15" name="query15">{{query15}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Contract
-            </label>
-            <textarea class="form-control" id="query16" name="query16">{{query16}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Paperless Billing
-            </label>
-            <textarea class="form-control" id="query17" name="query17">{{query17}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Payment Method
-            </label>
-            <textarea class="form-control" id="query18" name="query18">{{query18}}</textarea>
-        </div>  <div class="row">
-            <label for="comment">Tenure
-            </label>
-            <textarea class="form-control" id="query19" name="query19">{{query19}}</textarea>
-        </div>
-        
+         <div class="col-md-4">
+              <label class="label-name">Monthly charges
+              </label>
+              <textarea class="form-control" id='query2' name="query2">{{query2}}</textarea>
+          </div>
+          <div class="col-md-4">
+              <label class="label-name">Total charges
+              </label>
+              <textarea class="form-control" id="query3" name="query3">{{query3}}</textarea>
+          </div>
+          </div>
 
-        <button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
-        <button type="reset" class="btn btn-primary" onclick="myreset()"> RESET</button>
+          <div class="row">
+            <div class="col-md-4">
+              <label class="label-name">Gender
+              </label>
+              <textarea class="form-control" id="query4" name="query4">{{query4}}</textarea>
+          </div>  <div class="col-md-4">
+              <label class="label-name">Partner
+              </label>
+              <textarea class="form-control" id="query5" name="query5">{{query5}}</textarea>
+          </div>  <div class="col-md-4">
+              <label class="label-name">Dependence
+              </label>
+              <textarea class="form-control" id="query6" name="query6">{{query6}}</textarea>
+          </div> 
+          </div>
+           <div class="row">
+             <div class="col-md-4">
+              <label class="label-name">Phone Service
+              </label>
+              <textarea class="form-control" id="query7" name="query7">{{query7}}</textarea>
+          </div>  <div class="col-md-4">
+              <label class="label-name">Multiplie lines
+              </label>
+              <textarea class="form-control" id="query8" name="query8">{{query8}}</textarea>
+          </div>  <div class="col-md-4">
+              <label class="label-name">Internet Service
+              </label>
+              <textarea class="form-control" id="query9" name="query9">{{query9}}</textarea>
+          </div>  
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <label class="label-name">Online Security
+              </label>
+              <textarea class="form-control" id="query10" name="query10">{{query10}}</textarea>
+          </div>  <div class="col-md-4">
+              <label class="label-name">Online backup
+              </label>
+              <textarea class="form-control" id="query11" name="query11">{{query11}}</textarea>
+          </div>  <div class="col-md-4">
+              <label class="label-name">Device Protection
+              </label>
+              <textarea class="form-control" id="query12" name="query12">{{query12}}</textarea>
+          </div> 
+          </div>
+          <div class="row">
+           <div class="col-md-4">
+              <label class="label-name">Tech Support
+              </label>
+              <textarea class="form-control" id="query13" name="query13">{{query13}}</textarea>
+          </div> 
+           <div class="col-md-4">
 
-        </form>
-        <div class="row"> 
-			<div class="col-sm-9">
-			<textarea class="form-control"  id="comment" name="output1"  >{{output1}}</textarea>
-			<textarea class="form-control" id = "comment" name="output2" >{{output2}}</textarea>
-			</div>
-		</div>
+              <label class="label-name">Streaming Tv
+              </label>
+              <textarea class="form-control" id="query14" name="query14">{{query14}}</textarea>
+          </div>  <div class="col-md-4">
+              <label class="label-name">Streaming movies
+              </label>
+              <textarea class="form-control" id="query15" name="query15">{{query15}}</textarea>
+          </div>
+          </div>
+            <div class="row">
+              <div class="col-md-4">
+              <label class="label-name">Contract
+              </label>
+              <textarea class="form-control" id="query16" name="query16">{{query16}}</textarea>
+          </div>  <div class="col-md-4">
+              <label class="label-name">Paperless Billing
+              </label>
+              <textarea class="form-control" id="query17" name="query17">{{query17}}</textarea>
+          </div>  <div class="col-md-4">
+              <label class="label-name">Payment Method
+              </label>
+              <textarea class="form-control" id="query18" name="query18">{{query18}}</textarea>
+          </div>
+          </div>
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+              <label class="label-name">Tenure
+              </label>
+              <textarea class="form-control" id="query19" name="query19">{{query19}}</textarea>
+          </div>
+          <div class="col-md-4"></div>
+          </div>
+          
+          <div class="row">
+
+      
+          <button type="submit" class="submit" name="submit">SUBMIT</button>
+  </div>
+          </form>
+      </div>
+      <div id="output" class="out">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+          <label class="label-name">Prediction
+          </label>
+          <textarea class="form-control"  id="comment" name="output1"  >{{output1}}</textarea>
+      </div>
+      <div class="col-md-3"></div>
+      </div>
+       
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+        <label class="label-name">Confidence
+        </label>
+        <textarea class="form-control"  id="comment" name="output2"  >{{output2}}</textarea>
     </div>
-</body>
-<script>
-function myreset(){
-    var quer = document.getElementById('query1');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query1');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query2');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query3');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query4');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query5');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query6');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query7');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query8');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query9');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query10');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query11');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query12');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query13');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query14');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query15');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query16');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query17');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query18');
-            quer.innerHTML = "  ";
-            var quer = document.getElementById('query19');
-            quer.innerHTML = "  ";
+    <div class="col-md-3"></div>
+    </div>
+          </div>
+        </div>
+      </div>
+ </div> 
+ <div class="img-man"></div>
 
-    
-}
-</script>
+</body>
+
+
 </html>
