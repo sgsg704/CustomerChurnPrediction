@@ -1,5 +1,5 @@
 # Customer Churn Prediction
-App:- https://customerchurnprediction-api.herokuapp.com/
+
 
 > This is a small description about the project which will help you to save time and effort.
 
